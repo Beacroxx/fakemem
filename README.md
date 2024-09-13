@@ -30,7 +30,7 @@ export LD_PRELOAD=/path/to/fakemem.so
 
 2. For Elvish shell specifically:
 ```
-set-env LD_PRELOAD /home/bea/fakemem/fakemem.so
+set-env LD_PRELOAD /path/to/fakemem.so
 ```
 
 After setting `LD_PRELOAD`, any program you run in that shell session will see the inflated memory values.
