@@ -34,8 +34,8 @@ ssize_t read(int fd, void *buf, size_t count) {
         sscanf(meminfo_buffer, "MemTotal:        %llu kB",
                &actual_total_mem_kb);
 
-        unsigned long long scale_factor =
-            TARGET_MEMORY_KB / actual_total_mem_kb;
+        long double scale_factor =
+            (long double)TARGET_MEMORY_KB / actual_total_mem_kb;
 
         char fake_meminfo[MAX_MEMINFO_SIZE] = {0};
         char *line = strtok(meminfo_buffer, "\n");
